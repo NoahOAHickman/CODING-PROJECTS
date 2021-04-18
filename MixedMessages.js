@@ -4,6 +4,28 @@
 // I will also include a 'Name your firstborn child ${literalRandomLetters}', because why not have a 
 // legitimately randomly generated portion in there?
 
+const verbs = ['Give', 'Sell', 'Move', 'Take', 'Burn', 'Inhale'];
+const people = ['child', 'neighbor', 'cousin', 'father', 'grandparents'];
+const objects = ['drugs', 'a timeshare', '100 lottery tickets', 'books'];
 
+console.log(Math.floor(Math.random() * 5));
+console.log(verbs[Math.floor(Math.random() * 5)]);
+let wordOne = verbs[Math.floor(Math.random() * 5)];
+let wordTwo = people[Math.floor(Math.random() * 4)];
+let wordThree = objects[Math.floor(Math.random() * 3)];
+if (wordOne === 'Move' || wordOne === 'Burn' || wordOne === 'Take' || wordOne === 'Inhale'){
+    if (wordTwo === 'grandparents'){
+        wordTwo = wordTwo + '\''
+    }else{
+    wordTwo = wordTwo + '\'s';
+}
+    if (wordThree === 'a timeshare'){
+        wordThree = wordThree.replace('a timeshare', 'timeshare');
+    }
+}
+
+
+let badAdvice = `${wordOne} your ${wordTwo} ${wordThree}`;
+console.log(badAdvice);
 
 
