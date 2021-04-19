@@ -7,12 +7,9 @@
 const verbs = ['Give', 'Sell', 'Move', 'Take', 'Burn', 'Inhale'];
 const people = ['child', 'neighbor', 'cousin', 'father', 'grandparents'];
 const objects = ['drugs', 'a timeshare', '100 lottery tickets', 'books'];
-
-console.log(Math.floor(Math.random() * 5));
-console.log(verbs[Math.floor(Math.random() * 5)]);
-let wordOne = verbs[Math.floor(Math.random() * 5)];
-let wordTwo = people[Math.floor(Math.random() * 4)];
-let wordThree = objects[Math.floor(Math.random() * 3)];
+let wordOne = verbs[Math.floor(Math.random() * verbs.length)];
+let wordTwo = people[Math.floor(Math.random() * people.length)];
+let wordThree = objects[Math.floor(Math.random() * objects.length)];
 if (wordOne === 'Move' || wordOne === 'Burn' || wordOne === 'Take' || wordOne === 'Inhale'){
     if (wordTwo === 'grandparents'){
         wordTwo = wordTwo + '\''
